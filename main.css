@@ -3,8 +3,3 @@ body {
   background-size: cover;
   margin-left: 100px;
 }
-
-.tacos {
-  display: flex;
-  flex-wrap: wrap;
-}

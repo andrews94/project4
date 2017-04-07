@@ -1,22 +1,67 @@
-<h2>{{vm.champion.skill1}} - <img ng-src={{vm.champion.skill1img}}/></h2>
-<h3>{{vm.champion.skill2}} - <img ng-src={{vm.champion.skill2img}}/></h3>
-<h3>{{vm.champion.skill3}} - <img ng-src={{vm.champion.skill3img}}/></h3>
-<h3>{{vm.champion.skill4}} - <img ng-src={{vm.champion.skill4img}}/></h3>
+<h2 class="text-center">{{vm.champion.name}}</h2>
+<div class="row">
+  <div class="col-sm-6">
+    <div class="row">
+      <div class="col-sm-6">
+        <h3>{{vm.champion.skill1}} - </h3>
+      </div>
+      <div class="col-sm-3">
+        <img class="img-responsive" ng-src={{vm.champion.skill1img}}/>
+      </div>
+    </div>
+    <br/>
+    <div class="row">
+      <div class="col-sm-6">
+        <h3>{{vm.champion.skill2}} - </h3>
+      </div>
+      <div class="col-sm-3">
+        <img class="img-responsive" ng-src={{vm.champion.skill2img}}/>
+      </div>
+    </div>
+    <br/>
+    <div class="row">
+      <div class="col-sm-6">
+        <h3>{{vm.champion.skill3}} - </h3>
+      </div>
+      <div class="col-sm-3">
+        <img class="img-responsive" ng-src={{vm.champion.skill3img}}/>
+      </div>
+    </div>
+    <br/>
+    <div class="row">
+      <div class="col-sm-6">
+        <h3>{{vm.champion.skill4}} - </h3>
+      </div>
+      <div class="col-sm-3">
+        <img class="img-responsive" ng-src={{vm.champion.skill4img}}/>
+      </div>
+    </div>
+  </div>
 
+<div class="col-sm-6">
 <h2>Edit Champion</h2>
 <form data-ng-submit = 'vm.update()'>
-  <input placeholder = "Name" data-ng-model = "vm.champion.name">
-  <input placeholder = "Champion Image" data-ng-model = "vm.champion.img">
-  <input placeholder = "Skill 1" data-ng-model = "vm.champion.skill1">
-  <input placeholder = "Skill 1 Image" data-ng-model = "vm.champion.skill1img">
-  <input placeholder = "Skill 2" data-ng-model = "vm.champion.skill2">
-  <input placeholder = "Skill 2 Image" data-ng-model = "vm.champion.skill2img">
-  <input placeholder = "Skill 3" data-ng-model = "vm.champion.skill3">
-  <input placeholder = "Skill 3 Image" data-ng-model = "vm.champion.skill3img">
-  <input placeholder = "Skill 4" data-ng-model = "vm.champion.skill4">
-  <input placeholder = "Skill 4 Image" data-ng-model = "vm.champion.skill4img">
-  <button type="submit">Update Champion</button>
+  <div class="form-group">
+  <input class="form-control" placeholder = "Name" data-ng-model = "vm.champion.name">
+  <input class="form-control" placeholder = "Champion Image" data-ng-model = "vm.champion.img">
+  <input class="form-control" placeholder = "Skill 1" data-ng-model = "vm.champion.skill1">
+  <input class="form-control" placeholder = "Skill 1 Image" data-ng-model = "vm.champion.skill1img">
+  <input class="form-control" placeholder = "Skill 2" data-ng-model = "vm.champion.skill2">
+  <input class="form-control" placeholder = "Skill 2 Image" data-ng-model = "vm.champion.skill2img">
+  <input class="form-control" placeholder = "Skill 3" data-ng-model = "vm.champion.skill3">
+  <input class="form-control" placeholder = "Skill 3 Image" data-ng-model = "vm.champion.skill3img">
+  <input class="form-control" placeholder = "Skill 4" data-ng-model = "vm.champion.skill4">
+  <input class="form-control" placeholder = "Skill 4 Image" data-ng-model = "vm.champion.skill4img">
+  <br/>
+  <button class="btn btn-primary" type="submit">Update Champion</button>
+  <button class="pull-right btn btn-danger" data-ui-sref='championIndex()' ng-click = 'vm.delete(champion)'>Remove Champion</button>
+
+  </div>
+</div>
 </form>
 
-<button data-ui-sref='championIndex()' ng-click = 'vm.delete(champion)'>Remove Champion</button>
-<button data-ui-sref='championIndex'>Home</button>
+
+</div>
+
+<br/>
+<button class="center-block btn btn-primary" data-ui-sref='championIndex'>Home</button>

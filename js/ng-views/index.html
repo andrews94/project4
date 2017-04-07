@@ -1,22 +1,35 @@
-<div data-ng-repeat="champion in vm.champions">
-  <img ng-src={{champion.img}}/> - {{champion.name}}
+<div class="row">
+  <div class="col-sm-6">
+<h2 class="text-center">Champions</h2>
 
-  <button data-ui-sref="championShow({id: champion.$id})">Show</button>
-</div>
+    <div data-ng-repeat="champion in vm.champions">
+      <img class="img-responsive center-block" ng-src={{champion.img}}/>
+      <h4 class="text-center">{{champion.name}}</h4>
 
-<div className="tacos">
+      <button class="btn btn-primary center-block" data-ui-sref="championShow({id: champion.$id})">Show</button>
+      <br/>
+    </div>
+
+
+  </div>
+
+<div class="col-sm-6">
 <h2>Add a New Champion</h2>
 <form data-ng-submit = 'vm.create()'>
-  <input placeholder = "Name" data-ng-model = "vm.newChampion.name">
-  <input placeholder = "Champion Image" data-ng-model = "vm.newChampion.img">
-  <input placeholder = "Skill 1" data-ng-model = "vm.newChampion.skill1">
-  <input placeholder = "Skill 1 Image" data-ng-model = "vm.newChampion.skill1img">
-  <input placeholder = "Skill 2" data-ng-model = "vm.newChampion.skill2">
-  <input placeholder = "Skill 2 Image" data-ng-model = "vm.newChampion.skill2img">
-  <input placeholder = "Skill 3" data-ng-model = "vm.newChampion.skill3">
-  <input placeholder = "Skill 3 Image" data-ng-model = "vm.newChampion.skill3img">
-  <input placeholder = "Skill 4" data-ng-model = "vm.newChampion.skill4">
-  <input placeholder = "Skill 4 Image" data-ng-model = "vm.newChampion.skill4img">
-  <button type="submit">Add Champion</button>
+  <div class="form-group">
+  <input class="form-control" placeholder = "Name" data-ng-model = "vm.newChampion.name">
+  <input class="form-control" placeholder = "Champion Image" data-ng-model = "vm.newChampion.img">
+  <input class="form-control" placeholder = "Skill 1" data-ng-model = "vm.newChampion.skill1">
+  <input class="form-control" placeholder = "Skill 1 Image" data-ng-model = "vm.newChampion.skill1img">
+  <input class="form-control" placeholder = "Skill 2" data-ng-model = "vm.newChampion.skill2">
+  <input class="form-control" placeholder = "Skill 2 Image" data-ng-model = "vm.newChampion.skill2img">
+  <input class="form-control" placeholder = "Skill 3" data-ng-model = "vm.newChampion.skill3">
+  <input class="form-control" placeholder = "Skill 3 Image" data-ng-model = "vm.newChampion.skill3img">
+  <input class="form-control" placeholder = "Skill 4" data-ng-model = "vm.newChampion.skill4">
+  <input class="form-control" placeholder = "Skill 4 Image" data-ng-model = "vm.newChampion.skill4img">
+  <br/>
+  <button class="btn btn-primary pull-right" type="submit">Add Champion</button>
+</div>
 </form>
+</div>
 </div>
