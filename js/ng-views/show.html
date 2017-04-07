@@ -1,0 +1,22 @@
+<h2>{{vm.champion.skill1}} - <img ng-src={{vm.champion.skill1img}}/></h2>
+<h3>{{vm.champion.skill2}} - <img ng-src={{vm.champion.skill2img}}/></h3>
+<h3>{{vm.champion.skill3}} - <img ng-src={{vm.champion.skill3img}}/></h3>
+<h3>{{vm.champion.skill4}} - <img ng-src={{vm.champion.skill4img}}/></h3>
+
+<h2>Edit Champion</h2>
+<form data-ng-submit = 'vm.update()'>
+  <input placeholder = "Name" data-ng-model = "vm.champion.name">
+  <input placeholder = "Champion Image" data-ng-model = "vm.champion.img">
+  <input placeholder = "Skill 1" data-ng-model = "vm.champion.skill1">
+  <input placeholder = "Skill 1 Image" data-ng-model = "vm.champion.skill1img">
+  <input placeholder = "Skill 2" data-ng-model = "vm.champion.skill2">
+  <input placeholder = "Skill 2 Image" data-ng-model = "vm.champion.skill2img">
+  <input placeholder = "Skill 3" data-ng-model = "vm.champion.skill3">
+  <input placeholder = "Skill 3 Image" data-ng-model = "vm.champion.skill3img">
+  <input placeholder = "Skill 4" data-ng-model = "vm.champion.skill4">
+  <input placeholder = "Skill 4 Image" data-ng-model = "vm.champion.skill4img">
+  <button type="submit">Update Champion</button>
+</form>
+
+<button data-ui-sref='championIndex()' ng-click = 'vm.delete(champion)'>Remove Champion</button>
+<button data-ui-sref='championIndex'>Home</button>
